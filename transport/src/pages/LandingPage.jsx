@@ -3,6 +3,7 @@ import Header from "../components/LandingPageComponents/Header";
 import Footer from "../components/LandingPageComponents/Footer"
 import MessageComponent from "../components/LandingPageComponents/MessageComponent"
 import PickAService from "../components/LandingPageComponents/PickAService"
+import Contact from "../components/LandingPageComponents/Contact"
 import useAuthStore from "../Store/authStore"
 import AboutUs from "../components/AboutUsComponents/AboutUs"
 import WhyChooseUs from "../components/LandingPageComponents/WhyChooseUs"
@@ -83,6 +84,9 @@ const LandingPage = () => {
       </div>
       <div className={`${activeDashboard === "ABOUT US" ? 'flex':'hidden'}`}>
         <AboutUs/>
+      </div>
+      <div className={`${activeDashboard === "CONTACT US" ? 'flex':"hidden"}`}>
+          <Contact />
       </div>
     </div>
   );

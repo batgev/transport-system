@@ -7,7 +7,7 @@ const authStore = (set, get) => ({
     token: null,
     refreshToken: null,
     user:null,
-    activeDashboard:"HOME",
+    activeDashboard:"",
    
 
     loginFunc: (data, refreshToken,userData) => {

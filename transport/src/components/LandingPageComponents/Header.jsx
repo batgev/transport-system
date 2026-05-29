@@ -11,7 +11,7 @@ const Header = () => {
         {id:"02",text:"ABOUT US"},
        
         {id:"03",text:"FLEET"},
-        {id:"04",text:"CONTACT"}
+        {id:"04",text:"CONTACT US"}
     ]
 
     const [mobileSideBarToggle,setMobileSideBarToggle] = useState(false)
@@ -19,7 +19,7 @@ const Header = () => {
 const [currentDashboard,setCurrentDashboard] = useState("HOME");
 
   return (
-    <header classMame="  w-full flex flex-col ">
+    <header className="  w-full flex flex-col ">
       <div className="flex justify-between w-full shadow p-6 bg-[#0c1120] text-white">
         <div>
           <div className="absolute flex items-center gap-2 ">
