@@ -6,7 +6,7 @@ import {
 import useAuthStore from "../../Store/authStore"
 
 const Header = () => {
-  const {setActiveDashboard} = useAuthStore()
+  const {setActiveDashboard,activeDashboard} = useAuthStore()
     const nav = [{id:"01",text:"HOME"},
         {id:"02",text:"ABOUT US"},
        
@@ -16,7 +16,7 @@ const Header = () => {
 
     const [mobileSideBarToggle,setMobileSideBarToggle] = useState(false)
 
-const [currentDashboard,setCurrentDashboard] = useState("HOME");
+
 
   return (
     <header className="  w-full flex flex-col ">
@@ -59,11 +59,11 @@ const [currentDashboard,setCurrentDashboard] = useState("HOME");
           {nav.map((item) => (
             <li
               key={item.id}
-              className={`${currentDashboard === item.text ? "text-cyan-500" : ""} cursor-pointer`}
+              className={`${activeDashboard === item.text ? "text-cyan-500" : ""} cursor-pointer`}
               onClick={() => {
                 setActiveDashboard(item.text);
                 setMobileSideBarToggle(false);
-                setCurrentDashboard(item.text);
+               
               }}
             >
               {item.text}

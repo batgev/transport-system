@@ -9,9 +9,9 @@ import { faAddressCard,
 
 const Contact = () => {
   return (
-    <div className="pt-8 w-full flex flex-col justify-center items-center gap-4">
+    <div className="pt-8 w-screen flex flex-col justify-center items-center gap-4 md:gap-8 h-full md:h-screen">
       <h3 className="text-2xl">Contact JOJMO BLANKLINK</h3>
-      <div className="flex flex-col md:flex-row  md:items-center md:justify-center gap-8  w-[80%] ">
+      <div className="flex flex-col md:flex-row  md:items-center md:justify-center gap-8 md:gap-20  md:w-[70%] ">
         <div className="flex flex-col  items-center  gap-4">
           <div className="flex flex-col gap-2">
             <label
@@ -55,11 +55,11 @@ const Contact = () => {
             </button>
           </div>
         </div>
-        <div className="flex justify-center w-full"> 
+        <div className="flex justify-center "> 
           <h1>OR</h1>
         </div>
         <div>
-          <div className="flex flex-col gap-2 leading-loose text-xl">
+          <div className="flex flex-col gap-2 leading-loose text-xl w-[95vw] md:w-auto">
             <span className="flex gap-4 items-center">
               <FontAwesomeIcon
                 icon={faAddressCard}

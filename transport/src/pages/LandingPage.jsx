@@ -7,6 +7,8 @@ import Contact from "../components/LandingPageComponents/Contact"
 import useAuthStore from "../Store/authStore"
 import AboutUs from "../components/AboutUsComponents/AboutUs"
 import WhyChooseUs from "../components/LandingPageComponents/WhyChooseUs"
+import FLEET from "../components/LandingPageComponents/Fleet"
+import {Link} from "react-router-dom"
 const LandingPage = () => {
   const {activeDashboard} = useAuthStore()
   const stats = [
@@ -33,9 +35,9 @@ const LandingPage = () => {
                 Greet.
               </span>
               <div className="flex justify-center">
-                <button className="bg-[#C9A84C] mt-8  text-white  font-bold py-3 px-16 animate-pulse md:px-6 rounded-md  hover:bg-cyan-600">
+                <Link to="/booking" className="bg-[#C9A84C] mt-8  text-white  font-bold py-3 px-16 animate-pulse md:px-6 rounded-md  hover:bg-cyan-600">
                   Request for Quote
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -87,6 +89,9 @@ const LandingPage = () => {
       </div>
       <div className={`${activeDashboard === "CONTACT US" ? 'flex':"hidden"}`}>
           <Contact />
+      </div>
+      <div className={`${activeDashboard === "FLEET" ? 'flex':'hidden'}`}>
+          <FLEET />
       </div>
     </div>
   );
