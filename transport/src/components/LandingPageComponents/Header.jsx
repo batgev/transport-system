@@ -62,6 +62,7 @@ const [currentDashboard,setCurrentDashboard] = useState("HOME");
               className={`${currentDashboard === item.text ? "text-cyan-500" : ""} cursor-pointer`}
               onClick={() => {
                 setActiveDashboard(item.text);
+                setMobileSideBarToggle(false);
                 setCurrentDashboard(item.text);
               }}
             >
